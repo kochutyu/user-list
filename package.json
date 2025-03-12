@@ -1,0 +1,27 @@
+{
+  "name": "user-list",
+  "version": "1.0.0",
+  "description": "AngularJS 1.x with TypeScript and Webpack",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "webpack serve --open --progress --stats verbose",
+    "build": "webpack --mode production --progress --stats verbose",
+    "dev": "webpack --mode development --progress --stats verbose",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-route": "^1.8.3"
+  },
+  "devDependencies": {
+    "@types/angular": "^1.8.9",
+    "@types/angular-route": "^1.7.6",
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}
