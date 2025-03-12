@@ -8,6 +8,9 @@
     "baseUrl": "./src",
     "outDir": "./dist",
     "paths": {
+      "@src/*": [
+        "src/*"
+      ],
       "@controllers/*": ["controllers/*"],
       "@services/*": ["services/*"],
       "@directives/*": ["directives/*"],

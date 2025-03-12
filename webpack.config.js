@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const PORT = 9000;
 
@@ -9,10 +10,12 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
+        publicPath: "/"
     },
     resolve: {
         extensions: [".ts", ".js"],
         alias: {
+            "@src": path.resolve(__dirname, "src/"),
             "@interfaces": path.resolve(__dirname, "src/interfaces/"),
             "@store": path.resolve(__dirname, "src/store/"),
             "@enums": path.resolve(__dirname, "src/enums/"),
@@ -39,6 +42,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./src/index.html",
             inject: "body",
+        }),
+        new CopyWebpackPlugin({
+            patterns: [{from: "src/views", to: "views"}],
         }),
     ],
     devServer: {

@@ -18,7 +18,7 @@ export const reducer = <T>(state: IAppState = initialState, action: IStoreAction
             updateUsersStorage(updatedUsers);
             return {users: updatedUsers};
 
-        case EStore.REMOVE_USER:
+        case EStore.DELETE_USER:
             const filteredUsers: IUser[] = state.users.filter(user => user.id !== (action.payload as number));
             updateUsersStorage(filteredUsers);
             return {users: filteredUsers};
