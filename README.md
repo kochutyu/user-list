@@ -42,6 +42,8 @@ The app will be available at http://localhost:9000.
 │   │   ├── user.service.ts
 │   ├── directives/
 │   │   ├── validate-user.directive.ts
+│   ├── styles/
+│   │   ├── reset.css
 │   ├── views/
 │   │   ├── users.html
 │   │   ├── user-view.html

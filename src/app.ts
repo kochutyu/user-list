@@ -1,5 +1,7 @@
 console.log("🚀 AngularJS App is starting...");
 
+import "./styles.css";
+
 import * as angular from "angular";
 import "angular-route";
 
