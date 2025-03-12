@@ -5,7 +5,9 @@ import "./styles.css";
 import * as angular from "angular";
 import "angular-route";
 
-const app = angular.module("userApp", ["ngRoute"]);
+const app = angular.module("app", ["ngRoute"]);
+
+console.log("📌 Module 'userApp' created");
 
 app.config(($routeProvider: angular.route.IRouteProvider) => {
     console.log("✅ AngularJS Routes Configured");
@@ -17,4 +19,8 @@ app.config(($routeProvider: angular.route.IRouteProvider) => {
         .otherwise({
             redirectTo: "/users",
         });
+});
+
+app.run(($rootScope: any) => {
+    console.log("🟢 AngularJS App is running...");
 });
