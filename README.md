@@ -1,6 +1,6 @@
 # User List App
 
-A simple **Single Page Application (SPA)** built with **AngularJS (v1.8.3), TypeScript (v5.8.2), and Webpack (v5.98.0)**.
+A simple **Single Page Application (SPA)** built with **AngularJS (v1.8.3), TypeScript (v5.8.2), RxJS(v7.8.2), and Webpack (v5.98.0)**.
 
 ## 🚀 Getting Started
 
