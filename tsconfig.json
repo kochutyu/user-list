@@ -11,6 +11,15 @@
       "@controllers/*": ["controllers/*"],
       "@services/*": ["services/*"],
       "@directives/*": ["directives/*"],
+      "@interfaces/*": [
+        "interfaces/*"
+      ],
+      "@store/*": [
+        "store/*"
+      ],
+      "@enums/*": [
+        "enums/*"
+      ],
       "@views/*": ["views/*"]
     },
     "typeRoots": ["node_modules/@types"],

@@ -12,6 +12,14 @@ module.exports = {
     },
     resolve: {
         extensions: [".ts", ".js"],
+        alias: {
+            "@interfaces": path.resolve(__dirname, "src/interfaces/"),
+            "@store": path.resolve(__dirname, "src/store/"),
+            "@enums": path.resolve(__dirname, "src/enums/"),
+            "@controllers": path.resolve(__dirname, "src/controllers/"),
+            "@services": path.resolve(__dirname, "src/services/"),
+            "@directives": path.resolve(__dirname, "src/directives/"),
+        },
     },
     module: {
         rules: [
