@@ -1,12 +1,20 @@
 @import "./styles/reset.css";
+
+/* Components */
+@import "styles/components/table.scss";
+
+/* Layout */
 @import "styles/layout/users.scss";
 
 html, body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
     font-size: 10px;
     line-height: 100%;
     color: #000;
-    background-color: #fff;
+
+    background: var(--unnamed-color-eef0f8) 0% 0% no-repeat padding-box;
+
+    margin: 0 46px;
 }
 
 :root {
