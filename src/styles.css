@@ -2,6 +2,7 @@
 
 /* Components */
 @import "styles/components/table.scss";
+@import "styles/components/button.scss";
 
 /* Layout */
 @import "styles/layout/users.scss";

@@ -14,7 +14,9 @@ const updateUsersStorage = (users: IUser[]): void => {
 export const reducer = <T>(state: IAppState = initialState, action: IStoreAction<any>): IAppState => {
     switch (action.type) {
         case EStore.ADD_USER:
-            const updatedUsers: IUser[] = [...state.users, action.payload as IUser];
+            console.log(state, action)
+            const updatedUsers: IUser[] = [action.payload as IUser, ...state.users];
+            console.log(updatedUsers);
             updateUsersStorage(updatedUsers);
             return {users: updatedUsers};
 
