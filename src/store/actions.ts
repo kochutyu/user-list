@@ -14,3 +14,11 @@ export const deleteUser = (id: number): IStoreAction<number> => ({
 export const loadUsers = (users: IUser[]): IStoreAction<IUser[]> => ({
     type: EStore.LOAD_USERS, payload: users,
 });
+
+export const openCreateUserDialog = (): IStoreAction<true> => ({
+    type: EStore.OPEN_CREATE_USER_DIALOG, payload: true,
+});
+
+export const closeCreateUserDialog = (): IStoreAction<false> => ({
+    type: EStore.OPEN_CREATE_USER_DIALOG, payload: false,
+});

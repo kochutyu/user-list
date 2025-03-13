@@ -1,6 +1,5 @@
-<section class="users">
-    <!--    <h1 class="users__title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>-->
-
+<section class="users" ng-controller="UserViewController">
     <div class="users__list" ng-include="'views/user/view.html'"></div>
-    <!--    <div class="users__form" ng-include="'views/user/form.html'"></div>-->
+
+    <div class="users__form" ng-class="{'opened': isOpenedCreateUserDialog}" ng-include="'views/user/form.html'"></div>
 </section>

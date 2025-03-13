@@ -1,0 +1,85 @@
+form > .form-box:not(:last-child) {
+    margin-top: 40px;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box > label {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-13)/var(--unnamed-line-spacing-16) var(--unnamed-font-family-helvetica);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-3f4254);
+    text-align: left;
+    margin-bottom: .3rem;
+    border: 1px solid transparent;
+}
+
+.form-box > input[type="text"],
+.form-box > input[type="email"],
+.form-box > input[type="number"],
+.form-box > input[type="password"],
+select {
+    height: 46px;
+
+    background: var(--unnamed-color-f3f6f9) 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-line-spacing-16) var(--unnamed-font-family-helvetica);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-3f4254);
+    text-align: left;
+
+    outline: none;
+    border: none;
+
+    padding: 0 1.6rem;
+}
+
+select {
+    appearance: none; /* 🔹 Видаляє стандартний стиль браузера */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24'><path fill='#A4A4B5' d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 15px center; /* 🔹 Розміщує стрілку праворуч */
+    background-size: 24px;
+}
+
+.form-box > input[type="text"]:focus,
+.form-box > input[type="text"]:active,
+.form-box > input[type="email"]:focus,
+.form-box > input[type="email"]:active,
+.form-box > input[type="number"]:focus,
+.form-box > input[type="number"]:active,
+.form-box > input[type="password"]:focus,
+.form-box > input[type="password"]:active {
+    outline: none;
+    border: none;
+}
+
+.form-box.error > input[type="text"],
+.form-box.error > input[type="email"],
+.form-box.error > input[type="number"],
+.form-box.error > input[type="password"],
+.form-box.error > input[type="text"]:focus,
+.form-box.error > input[type="text"]:active,
+.form-box.error > input[type="email"]:focus,
+.form-box.error > input[type="email"]:active,
+.form-box.error > input[type="number"]:focus,
+.form-box.error > input[type="number"]:active,
+.form-box.error > input[type="password"]:focus,
+.form-box.error > input[type="password"]:active {
+    border: 1px solid var(--unnamed-color-ef7da0);
+}
+
+.form-box__error {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-13)/var(--unnamed-line-spacing-16) var(--unnamed-font-family-helvetica);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ef7da0);
+    text-align: left;
+
+    margin-top: .3rem;
+}

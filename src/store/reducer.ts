@@ -13,20 +13,26 @@ const updateUsersStorage = (users: IUser[]): void => {
 
 export const reducer = <T>(state: IAppState = initialState, action: IStoreAction<any>): IAppState => {
     switch (action.type) {
+        // USER
         case EStore.ADD_USER:
-            console.log(state, action)
             const updatedUsers: IUser[] = [action.payload as IUser, ...state.users];
-            console.log(updatedUsers);
             updateUsersStorage(updatedUsers);
-            return {users: updatedUsers};
+            return {...state, users: updatedUsers};
 
         case EStore.DELETE_USER:
             const filteredUsers: IUser[] = state.users.filter(user => user.id !== (action.payload as number));
             updateUsersStorage(filteredUsers);
-            return {users: filteredUsers};
+            return {...state, users: filteredUsers};
 
         case EStore.LOAD_USERS:
-            return {users: action.payload as IUser[]};
+            return {...state, users: action.payload as IUser[]};
+
+        // CREATE NEW USER
+        case EStore.OPEN_CREATE_USER_DIALOG:
+            return {...state, isOpenedCreateUserDialog: action.payload as true};
+
+        case EStore.CLOSE_CREATE_USER_DIALOG:
+            return {...state, isOpenedCreateUserDialog: action.payload as false};
 
         default:
             return state;

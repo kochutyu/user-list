@@ -1,2 +1,3 @@
 export * from './store.enum';
 export * from './storage.enum';
+export * from './role.enum';

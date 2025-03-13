@@ -17,11 +17,11 @@
             </thead>
             <tbody>
             <tr ng-repeat="user in users track by user.id">
-                <td>username</td>
-                <td>firstName</td>
-                <td>lastName</td>
-                <td>email</td>
-                <td>type</td>
+                <td>{{user.username}}</td>
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.user_type}}</td>
             </tr>
             </tbody>
         </table>

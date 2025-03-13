@@ -11,6 +11,8 @@ import {AppConfig} from "./routing";
 import {IAppState} from "@interfaces/state.interface";
 import {UserController} from "@controllers/index";
 import {UserViewController} from "@controllers/user-view.controller";
+import {UserFormController} from "@controllers/user-form.controller";
+import {ValidateFormDirective, ValidationMessageDirective} from "@directives/validate-user.directive";
 
 export const state$: BehaviorSubject<IAppState> = new BehaviorSubject(store.getState());
 
@@ -26,7 +28,12 @@ console.log("✅ Step 1: AngularJS App created");
 // Step 2
 app.controller('UserController', UserController);
 app.controller('UserViewController', UserViewController);
+app.controller('UserFormController', UserFormController);
 console.log("✅ Step 2: AngularJS Controllers Configured");
+
+app.directive('validateForm', ValidateFormDirective);
+app.directive('validationMessage', ValidationMessageDirective);
+console.log("✅ Step 2: AngularJS Directives Configured");
 
 // Step 3
 app.config(AppConfig);

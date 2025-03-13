@@ -1,1 +1,77 @@
-form
+<form name="userForm" class="user-form" ng-controller="UserFormController"
+      validate-form novalidate>
+    <div class="user-form__header">
+        <h3>Create new user</h3>
+        <button class="user-form__close" ng-click="closeCreateUserDialog()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <defs>
+                    <style>.a {
+                        fill: #a4a4b5;
+                    }
+
+                    .b {
+                        fill: none;
+                    }</style>
+                </defs>
+                <path class="a"
+                      d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z"/>
+                <path class="b" d="M0,0H24V24H0Z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="user-form__content">
+        <div class="form-box" ng-class="{'error': userForm.username.$invalid && userForm.$submitted}">
+            <label>Username*</label>
+            <input type="text" name="username" ng-model="user.username" ng-required="true" validation-message/>
+            <!--            <span class="form-box__error" ng-show="userForm.username.$error.required && userForm.$submitted">-->
+            <!--                Username is required.-->
+            <!--            </span>-->
+        </div>
+
+        <div class="form-box">
+            <label>First name*</label>
+            <input type="text">
+        </div>
+
+        <div class="form-box error">
+            <label>Last name*</label>
+            <input type="text">
+            <span class="form-box__error">
+               Error message
+            </span>
+        </div>
+
+        <div class="form-box">
+            <label>Email*</label>
+            <input type="text">
+        </div>
+
+        <div class="form-box">
+            <label>Type*</label>
+            <select ng-model="selectedRole" ng-change="onRoleChange(selectedRole)">
+                <option value="admin">
+                    Admin
+                </option>
+                <option value="worker">
+                    Worker
+                </option>
+            </select>
+        </div>
+
+        <div class="form-box">
+            <label>Password*</label>
+            <input type="password">
+        </div>
+
+        <div class="form-box">
+            <label>Repeat password*</label>
+            <input type="password">
+        </div>
+    </div>
+
+    <div class="user-form__footer">
+        <!--        <button class="secondary">Delete</button>-->
+        <button class="primary" type="submit">Create</button>
+    </div>
+</form>
